@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection.js");
-const SequelizeStore = require('connect-session-sequelize');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'Super secret secret',
@@ -37,4 +37,4 @@ app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
-})
+});
