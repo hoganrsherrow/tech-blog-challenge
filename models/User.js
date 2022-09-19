@@ -3,7 +3,7 @@ const {
     DataTypes
 } = require('sequelize');
 const bcrypt = require('bcrypt');
-const sequelize = require('sequelize');
+const sequelize = require('../config/connection.js');
 
 // Extend the User Model from sequelize
 class User extends Model {
@@ -19,7 +19,7 @@ User.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: TextTrackCue
+            autoIncrement: true
         },
         username: {
             type: DataTypes.STRING,
