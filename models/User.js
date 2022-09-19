@@ -19,7 +19,7 @@ User.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: TextTrackCue
+            autoIncrement: true
         },
         username: {
             type: DataTypes.STRING,
