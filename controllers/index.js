@@ -1,5 +1,5 @@
 // import router from Express
-const router = require('express');
+const router = require('express').Router();
 
 // import routes from controllers directory
 const apiRoutes = require('./api/index.js');
